@@ -25,16 +25,14 @@ int main()
     //         }
     //        
     {
-        if(first==0||arr[i]>first){
-            second=first;
-            first=arr[i];
-        }else{
-            if(second==0||arr[i]>second){
-                if(arr[i]!=first){
-                    second=arr[i];
-                }
-            }
+      if(first==0||arr[i]>first){
+        second=first;
+        first=arr[i];
+      }else if(second==0||arr[i]>second){
+        if(arr[i]!=first){
+            second=arr[i];
         }
+      }
     }
     cout<<second;
 }
